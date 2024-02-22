@@ -1,88 +1,107 @@
 while True:
+
     print()
-    primero_numero_str = input('Digite o primero número: ')
-    print()
-    
-    if primero_numero_str == '':
-        print('O primero número esta vazio!!')
-        print()
+
+    primeiro_numero_str = input('Digite o primero número: ')
+   
+    if primeiro_numero_str == '':
+        print('Por favor, insira alguma informação.')
         continue
-    
-    segundo_numero_str = input('Digite o segundo número: ').strip()
+
     print()
+
+    segundo_numero_str  = input('Digite o segundo número: ').strip()
 
     if segundo_numero_str == '':
-        print('O segundo número esta vazio!!')
+        print('Por favor, insira alguma informação.')
         print()
-        segundo_numero_str = input('Digite novamente o segundo número: ').strip()
-        
+        segundo_numero_str = input('Digite o Segundo número novamente: ').strip()
+    print()
 
     try:
-   
         print()
-        primero_numero = int(primero_numero_str)
+        primeiro_numero = int(primeiro_numero_str)
         print()
-        segundo_numero = int(segundo_numero_str)
+        segundo_numero  = int(segundo_numero_str)
         print()
     
     except ValueError:
-        print('Entrada inválida, Por favor, digite um número inteiro')
+        print('Apenas números inteiros são válidos!')
         continue
-        
-        
 
-    print('        + , - , * , / ')
+    print('   + , - , * , / ')
     print()
 
-    operadores = input('ESCOLHA UM DOS OPERADORES ACIMA: ')
+    operador  = input('ESCOLHA UM OPERADOR ACIMA: ')
     print()
 
-    if operadores == '+': 
-
-        calculo = primero_numero + segundo_numero
-
-        print('A resposta é: ', calculo)
+    if operador == '+':
+        calculo = primeiro_numero + segundo_numero
+        print('O resutado é: ', calculo)
+        print()
+        
+    elif operador == '-':
+        calculo = primeiro_numero - segundo_numero
+        print('O resutado é: ', calculo)
         print()
 
-    elif operadores == '-':
-
-        calculo = primero_numero - segundo_numero
-
-        print('A resposta é: ', calculo)
+    elif operador == '*':
+        calculo = primeiro_numero - segundo_numero
+        print('O resutado é: ', calculo)
         print()
 
-    elif operadores == '*':
-
-        calculo = primero_numero * segundo_numero
-
-        print('A resposta é: ', calculo)
-        print()
-
-    elif operadores == '/':
+    elif operador == '/':
 
         if segundo_numero != 0:
-            
-            calculo = primero_numero / segundo_numero
-            
-            print('A resposta é: ', calculo)
+            calculo = primeiro_numero / segundo_numero
+            print('O resutado é: ', calculo)
             print()
         
         else:
-            
             print('ZERO NÃO É UM NÚMERO DIVISIVEL!!')
             print()
 
-    elif operadores != '+' and '-' and '*' and '/':
+    elif operador != '+' and '-' and '*' and '/':
+
+        print('Escolha um operador válido!')
+        print()
+        operador = input('Digite o operador novamente: ')
+        print()
+
+        if operador == '+':
+            calculo = primeiro_numero + segundo_numero
+            print('O resutado é: ', calculo)
+            print()
         
-        print('ESCOLHA UM OPERADOR!!')
+    elif operador == '-':
+        calculo = primeiro_numero - segundo_numero
+        print('O resutado é: ', calculo)
         print()
 
-    else:
-        print('ESCULHA UM OPERADOR!!!')
+    elif operador == '*':
+        calculo = primeiro_numero - segundo_numero
+        print('O resutado é: ', calculo)
         print()
 
-    
+    elif operador == '/':
+
+        if segundo_numero != 0:
+            calculo = primeiro_numero / segundo_numero
+            print('O resutado é: ', calculo)
+            print()
+        
+        else:
+            print('ZERO NÃO É UM NÚMERO DIVISIVEL!!')
+            print()
+
+
     continuar = input('Deseja continuar o calculo? (s/n): ')
+    print()
 
     if continuar.lower() != 's' and 'S':
         break
+
+    
+
+
+
